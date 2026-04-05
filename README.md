@@ -10,38 +10,36 @@
 
 🔗 https://github.com/PriyankaSolanki18/StayBooking
 
-✨ Features
-🔐 User Authentication & Authorization (Passport.js)
-🏠 Create, Edit & Delete Listings (CRUD Operations)
-🖼️ Image Uploads with Cloud Storage (Cloudinary)
-⭐ Review & Rating System
-💾 Session Management using MongoDB Store
-🎨 Responsive UI using EJS & Bootstrap
-🔄 RESTful APIs & MVC Architecture
-⚠️ Error Handling & Data Validation
+✨ Features: <br>
+🔐 User Authentication & Authorization (Passport.js)<br>
+🏠 Create, Edit & Delete Listings (CRUD Operations)<br>
+🖼️ Image Uploads with Cloud Storage (Cloudinary)<br>
+⭐ Review & Rating System<br>
+💾 Session Management using MongoDB Store<br>
+🎨 Responsive UI using EJS & Bootstrap<br>
+🔄 RESTful APIs & MVC Architecture<br>
+⚠️ Error Handling & Data Validation<br>
+
 🛠️ Tech Stack
 
-Frontend:
-
-EJS
+-> Frontend:
+EJS | 
 Bootstrap
 
-Backend:
-
-Node.js
+-> Backend:
+Node.js | 
 Express.js
 
-Database:
-
+-> Database:
 MongoDB
 
-Other Tools & Libraries:
-
-Passport.js (Authentication)
-Cloudinary (Image Storage)
-Multer (File Uploads)
+-> Other Tools & Libraries:
+Passport.js (Authentication) | 
+Cloudinary (Image Storage) | 
+Multer (File Uploads) | 
 Express-Session & Connect-Mongo
 
+```
 📁 Project Structure
 StayBooking/
 │── models/        # Mongoose schemas
@@ -51,7 +49,8 @@ StayBooking/
 │── public/        # Static files (CSS, JS)
 │── utils/         # Custom utilities & error handling
 │── app.js         # Main server file
-
+```
+```
 ⚙️ Installation & Setup
 1️⃣ Clone the repository
 git clone https://github.com/PriyankaSolanki18/StayBooking.git
@@ -73,28 +72,29 @@ nodemon app.js
 
 App will run on:
 http://localhost:8080
+```
 
-🚀 Deployment
-Deployed on Render
-Uses MongoDB Atlas for database
-Environment variables configured for production
+🚀 Deployment:<br>
+-> Deployed on Render
+<br>
+-> Uses MongoDB Atlas for database
+<br>
+-> Environment variables configured for production
 
-🧠 Learnings
-Built complete CRUD-based full-stack application
-Implemented authentication & session handling
-Integrated third-party services (Cloudinary)
-Understood MVC architecture & REST APIs
-Handled real-world deployment challenges
+🧠 Learnings:<br>
+-> Built complete CRUD-based full-stack application<br>
+-> Implemented authentication & session handling<br>
+-> Integrated third-party services (Cloudinary)<br>
+-> Understood MVC architecture & REST APIs<br>
+-> Handled real-world deployment challenges
 
-🤝 Contributing
-
-Contributions are welcome!
+🤝 Contributing:<br>
+Contributions are welcome!<br>
 Feel free to fork this repo and submit a pull request.
 
-📬 Contact
-
+📬 Contact:<br>
 👩‍💻 Email : priyankasolanki.1820@gmail.com
 
 ⭐ Show your support
-
+<br>
 If you like this project, give it a ⭐ on GitHub!
