@@ -1,14 +1,8 @@
-🏡 StayBooking – Airbnb Clone (MERN Stack)
+🏡 StayNest - Property Booking Platform
 
 🚀 A full-stack web application inspired by Airbnb that allows users to explore, create, and manage property listings seamlessly.
 
-🌐 Live Demo
 
-🔗 https://staybooking-xur1.onrender.com
-
-📂 GitHub Repository
-
-🔗 https://github.com/PriyankaSolanki18/StayBooking
 
 ✨ Features: <br>
 🔐 User Authentication & Authorization (Passport.js)<br>
@@ -41,7 +35,7 @@ Express-Session & Connect-Mongo
 
 ```
 📁 Project Structure
-StayBooking/
+StayNest/
 │── models/        # Mongoose schemas
 │── routes/        # Express routes
 │── controllers/   # Route logic
@@ -53,8 +47,8 @@ StayBooking/
 ```
 ⚙️ Installation & Setup
 1️⃣ Clone the repository
-git clone https://github.com/PriyankaSolanki18/StayBooking.git
-cd StayBooking
+git clone https://github.com/Hitsahirrao/StayNest.git
+cd StayNest
 
 2️⃣ Install dependencies
 npm install
@@ -93,7 +87,7 @@ Contributions are welcome!<br>
 Feel free to fork this repo and submit a pull request.
 
 📬 Contact:<br>
-👩‍💻 Email : priyankasolanki.1820@gmail.com
+👩‍💻 Email : hiteshahirrao282001@gmail.com
 
 ⭐ Show your support
 <br>

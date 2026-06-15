@@ -2,7 +2,7 @@
   "engines": {
     "node": "22.17.1"
   },
-  "name": "staybooking",
+  "name": "staynest",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PriyankaSolanki18/StayBooking.git"
+    "url": "git+https://github.com/Hitsahirrao/StayNest.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PriyankaSolanki18/StayBooking/issues"
+    "url": "https://github.com/Hitsahirrao/StayNest/issues"
   },
-  "homepage": "https://github.com/PriyankaSolanki18/StayBooking#readme",
+  "homepage": "https://github.com/Hitsahirrao/StayNest#readme",
   "dependencies": {
     "cloudinary": "^1.41.3",
     "connect-flash": "^0.1.1",

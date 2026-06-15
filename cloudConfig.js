@@ -10,7 +10,7 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
-    folder: 'staybooking_DEV',
+    folder: 'staynest_DEV',
     allowedFormats: ["png", "jpg", "jpeg"],
   },
 });
