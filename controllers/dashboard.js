@@ -5,8 +5,12 @@ const Booking = require("../models/bookings");
 module.exports.showDashboard = async (req, res) => {
   const userId = req.user._id;
 
-  const user = await User.findById(userId).populate("wishlist");
+  const user = await User.findById(userId)
+    .populate("wishlist")
+    .populate("recentlyViewed");
+
   const myListings = await Listing.find({ owner: userId });
+
   const bookings = await Booking.find({ guest: userId })
     .populate("listing")
     .sort({ createdAt: -1 })

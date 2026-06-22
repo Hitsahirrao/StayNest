@@ -71,4 +71,26 @@
       </div>
     <% } %>
   <% } %>
+  <hr>
+
+<h4>Recently Viewed</h4>
+
+<% if (!user.recentlyViewed || user.recentlyViewed.length === 0) { %>
+  <p>No recently viewed listings.</p>
+<% } %>
+
+<div class="row">
+  <% for (let listing of user.recentlyViewed) { %>
+    <% if (listing) { %>
+      <div class="card col-md-3 m-2">
+        <img src="<%= listing.image.url %>" class="card-img-top" style="height: 12rem; object-fit: cover;">
+        <div class="card-body">
+          <h6><%= listing.title %></h6>
+          <p>₹ <%= listing.price.toLocaleString("en-IN") %></p>
+          <a href="/listings/<%= listing._id %>" class="btn btn-sm btn-dark">View</a>
+        </div>
+      </div>
+    <% } %>
+  <% } %>
+</div>
 </div>
