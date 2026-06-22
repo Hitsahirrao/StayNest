@@ -7,14 +7,22 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
+
     wishlist: [
         {
             type: mongoose.Schema.Types.ObjectId,
             ref: "Listing"
         }
-    ],  
+    ],
+
+    recentlyViewed: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Listing"
+        }
+    ]
 });
 
 userSchema.plugin(passportLocalMongoose.default);
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model("User", userSchema);

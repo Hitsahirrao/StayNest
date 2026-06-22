@@ -1,4 +1,5 @@
 const Listing = require("../models/listing");
+const User = require("../models/user");
 
 module.exports.index = async (req, res) => {
     const { search, minPrice, maxPrice, sort } = req.query;
@@ -48,21 +49,40 @@ module.exports.renderNewForm = (req,res) => {
     res.render("listings/new.ejs");
 };
 
-module.exports.showListing = async (req,res) => {
-    let {id} = req.params;
+module.exports.showListing = async (req, res) => {
+    let { id } = req.params;
+
     const listing = await Listing.findById(id)
-    .populate({path: "reviews",
-         populate: {
-            path: "author",
-         },
+        .populate({
+            path: "reviews",
+            populate: {
+                path: "author",
+            },
         })
-    .populate("owner");
-    if(!listing){
+        .populate("owner");
+
+    if (!listing) {
         req.flash("error", "Listing you requested for does not exist!");
-        res.redirect("/listings");
+        return res.redirect("/listings");
     }
-    console.log(listing);
-    res.render("listings/show.ejs",{listing});
+
+    if (req.user) {
+        await User.findByIdAndUpdate(req.user._id, {
+            $pull: { recentlyViewed: id },
+        });
+
+        await User.findByIdAndUpdate(req.user._id, {
+            $push: {
+                recentlyViewed: {
+                    $each: [id],
+                    $position: 0,
+                    $slice: 5,
+                },
+            },
+        });
+    }
+
+    res.render("listings/show.ejs", { listing });
 };
 
 module.exports.createListing = async (req,res, next) => {
