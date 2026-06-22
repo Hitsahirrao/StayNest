@@ -1,27 +1,29 @@
-# 🎨 AI Thumbnail Generator
+# 🏡 StayNest - Property Booking Platform
 
-🚀 **AI Thumbnail Generator** is a full-stack web application that enables users to generate eye-catching YouTube thumbnails using AI. Users can customize styles, color themes, and aspect ratios to create professional-quality thumbnails in seconds.
+🚀 **StayNest** is a full-stack Airbnb-inspired property booking platform that enables users to discover, create, manage, and book accommodations with a seamless user experience.
 
 ## 🌐 Live Demo
 
-* **Live Application:** https://ai-thumbnail-generator-teal.vercel.app
-* **GitHub Repository:** https://github.com/Hitsahirrao/AI-Thumbnail-Generator
+* **Live Application:** https://staynest-e5w8.onrender.com
+* **GitHub Repository:** https://github.com/Hitsahirrao/StayNest
 
 ---
 
 ## ✨ Features
 
-* 🔐 User Authentication & Session Management
-* 🎨 AI-Powered Thumbnail Generation
-* 🖼️ Multiple Thumbnail Styles
-* 🌈 Custom Color Schemes
-* 📐 Support for Different Aspect Ratios
-* 📝 Optional Text Overlay and Prompt Customization
-* 📂 Thumbnail History Management
-* 🗑️ Delete Generated Thumbnails
-* ☁️ Cloudinary Image Storage
-* ⚡ Responsive and Interactive UI
-* 🎞️ Smooth Animations with Framer Motion
+* 🔐 User Authentication & Authorization using Passport.js
+* 🏠 Create, Edit, and Delete Property Listings
+* 🖼️ Image Uploads with Cloudinary
+* ⭐ Review and Rating System
+* ❤️ Wishlist Functionality
+* 📅 Property Booking System
+* 🚫 Booking Availability Conflict Detection
+* 🔍 Search Listings by Title, Location, and Country
+* 💰 Price Filtering and Sorting
+* 📊 User Dashboard
+* 🕒 Recently Viewed Listings
+* 💾 Session Management with MongoDB Store
+* 🎨 Responsive UI with Bootstrap and EJS
 * 🔄 RESTful APIs with MVC Architecture
 * ⚠️ Error Handling and Server-Side Validation
 
@@ -31,17 +33,13 @@
 
 ### Frontend
 
-* React
-* TypeScript
-* Tailwind CSS
-* Framer Motion
-* Axios
+* EJS
+* Bootstrap
 
 ### Backend
 
 * Node.js
 * Express.js
-* TypeScript
 
 ### Database
 
@@ -50,32 +48,28 @@
 
 ### Libraries & Tools
 
-* Express-Session
-* Connect-Mongo
-* bcryptjs
+* Passport.js
+* Passport-Local-Mongoose
 * Cloudinary
 * Multer
-* Axios
-* CORS
-* dotenv
+* Express-Session
+* Connect-Mongo
+* Joi
+* Method-Override
 
 ---
 
 ## 📁 Project Structure
 
 ```text
-AI-Thumbnail-Generator/
-│
-├── Client/                 # React Frontend
-│── server/                 # Express Backend
-│   ├── controllers/        # Business Logic
-│   ├── models/             # MongoDB Schemas
-│   ├── routes/             # API Routes
-│   ├── middleware/         # Custom Middleware
-│   ├── config/             # Database and Cloudinary Config
-│   └── server.ts           # Entry Point
-│
-└── README.md
+StayNest/
+│── models/        # Mongoose Schemas
+│── routes/        # Express Routes
+│── controllers/   # Route Logic
+│── views/         # EJS Templates
+│── public/        # Static Assets
+│── utils/         # Error Handling Utilities
+│── app.js         # Entry Point
 ```
 
 ---
@@ -85,79 +79,66 @@ AI-Thumbnail-Generator/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/Hitsahirrao/AI-Thumbnail-Generator.git
-cd AI-Thumbnail-Generator
+git clone https://github.com/Hitsahirrao/StayNest.git
+cd StayNest
 ```
 
-### Backend Setup
+### Install Dependencies
 
 ```bash
-cd server
 npm install
-npm run dev
 ```
 
-### Frontend Setup
+### Configure Environment Variables
 
-```bash
-cd Client
-npm install
-npm run dev
-```
-
-Frontend runs locally on:
-
-```text
-http://localhost:5173
-```
-
-Backend runs locally on:
-
-```text
-http://localhost:3000
-```
-
----
-
-## 🔑 Environment Variables
-
-Create a `.env` file inside the `server` directory:
+Create a `.env` file:
 
 ```env
-MONGODB_URI=your_mongodb_connection_string
-SESSION_SECRET=your_session_secret
-CLIENT_URL=http://localhost:5173
-CLOUDINARY_URL=your_cloudinary_url
+ATLASDB_URL=your_mongodb_connection_string
+SECRET=your_session_secret
+CLOUD_NAME=your_cloudinary_name
+CLOUD_API_KEY=your_cloudinary_key
+CLOUD_API_SECRET=your_cloudinary_secret
+```
+
+### Run the Application
+
+```bash
+npm start
+```
+
+Application runs locally on:
+
+```text
+http://localhost:8080
 ```
 
 ---
 
 ## 🚀 Deployment
 
-* Frontend deployed on Vercel
-* Backend deployed on Render
+* Deployed on Render
 * Database hosted on MongoDB Atlas
 * Images stored using Cloudinary
-* Environment variables configured securely for production
+* Production environment variables configured securely
 
 ---
 
 ## 🧠 Key Learnings
 
-* Built a complete full-stack MERN application
-* Implemented user authentication and session management
-* Integrated AI-based image generation
-* Managed image storage with Cloudinary
+* Built a complete CRUD-based full-stack web application
+* Implemented authentication and authorization
+* Developed booking and wishlist functionality
+* Integrated third-party services such as Cloudinary
 * Designed REST APIs following MVC architecture
-* Used TypeScript in both frontend and backend
-* Created responsive UI with Tailwind CSS
-* Implemented real-world deployment using Vercel, Render, and MongoDB Atlas
+* Managed sessions and persistent login
+* Handled real-world deployment using Render and MongoDB Atlas
 
 ---
 
 ## 📬 Contact
 
-📧 Email: [hiteshahirrao282001@gmail.com](mailto:hiteshahirrao282001@gmail.com)
+📧 **Email:** [hiteshahirrao282001@gmail.com](mailto:hiteshahirrao282001@gmail.com)
 
 ---
 
