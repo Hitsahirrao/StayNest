@@ -22,6 +22,18 @@ module.exports.createBooking = async (req, res) => {
     return res.redirect(`/listings/${id}`);
   }
 
+  const overlappingBooking = await Booking.findOne({
+    listing: id,
+    status: "confirmed",
+    checkIn: { $lt: end },
+    checkOut: { $gt: start },
+  });
+
+  if (overlappingBooking) {
+    req.flash("error", "This listing is already booked for selected dates.");
+    return res.redirect(`/listings/${id}`);
+  }
+
   const booking = new Booking({
     listing: id,
     guest: req.user._id,
@@ -38,7 +50,8 @@ module.exports.createBooking = async (req, res) => {
 
 module.exports.myBookings = async (req, res) => {
   const bookings = await Booking.find({ guest: req.user._id })
-    .populate("listing");
+    .populate("listing")
+    .sort({ createdAt: -1 });
 
   res.render("bookings/index.ejs", { bookings });
 };
